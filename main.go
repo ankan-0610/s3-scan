@@ -56,8 +56,8 @@ func main() {
     sudo apt install -y python3
     echo "export AWS_ACCESS_KEY_ID=%s" >> /tmp/.env
     echo "export AWS_SECRET_ACCESS_KEY=%s" >> /tmp/.env
-    curl -o /tmp/startup-script.py https://raw.githubusercontent.com/ankan-0610/pii-scan-script/main/extract-pii.py
-    curl -o /tmp/requirements.txt https://raw.githubusercontent.com/ankan-0610/pii-scan-script/main/requirements.txt
+    curl -o /tmp/startup-script.py https://raw.githubusercontent.com/ankan-0610/pii-scan-script/master/extract-pii.py
+    curl -o /tmp/requirements.txt https://raw.githubusercontent.com/ankan-0610/pii-scan-script/master/requirements.txt
     python3 -m pip install -r /tmp/requirements.txt
     source /tmp/.env
     python3 /tmp/startup-script.py`, awsAccessKeyID, awsSecretAccessKey)
